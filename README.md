@@ -23,3 +23,11 @@ An interactive web-based dashboard designed and developed for **Sektor Pendidika
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/foxpa/spk_dashboard.git](https://github.com/foxpa/spk_dashboard.git)
+
+## 💡 Reflection & Future Improvements
+Looking back at this project during my Degree studies, key architectural and code enhancements I would implement today include:
+
+* **Code Modularization & DRY Principle:** Refactoring duplicated PHP files (e.g., individual district pages like `bachok.php`, `machang.php`) into a single dynamic route using URL parameters (e.g., `school.php?district=bachok`) and reusable layout components (`include/header.php`, `include/footer.php`).
+* **CSS Centralization:** Linking shared external CSS stylesheets across all pages instead of repeating embedded styles or redundant CSS definitions.
+* **Security Enhancements:** Updating database queries to use Prepared Statements (PDO) to protect against SQL Injection vulnerabilities.
+* **Modern Architecture:** Upgrading the application to an MVC framework (such as Laravel) to cleanly separate business logic from UI templates.
