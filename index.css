@@ -1,0 +1,668 @@
+/*Logo & navbar w&h style*/
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.navbar navbar-expand-lg{
+  height: 5px;
+  width: 100%;
+}
+
+.nav-item{
+font-weight: 600;
+margin-right: 10px;
+font-family: Arial;
+z-index: 10;
+}
+
+.navbar-brand img
+{
+  width: 160px;
+  height: 130px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/*navbar toggler style*/
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  position: relative;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 25px ; /*length of the navbar toggle*/
+  background: white;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+}
+
+/* State when the navbar is collapsed */
+.navbar-toggler.collapsed .top-bar {
+  position: absolute;
+  top: 0px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  position: absolute;
+  top: 20px;
+  transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+.navbar-toggler .top-bar {
+  top: inherit;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  top: inherit;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  top: inherit;
+  transform: rotate(-135deg);
+}
+
+/*infogr box*/
+ .wrapper{
+  margin: 30px auto;
+  border-radius: 10px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  box-shadow: 0 0 40px 2px rgba(37, 73, 214, 0.18) ;
+  max-width: 1000px; /* change width of the box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.feature-box {
+  display: flex; /* Make the feature-box a flex container */
+  flex-direction: column; /* align elementss  vertically */
+  justify-content: center; /* Align the elements horizontally */
+  align-items: center; /* Align the elements vertically at the top */
+  text-align: center;
+  height: auto;
+}
+
+.feature-box h1 {
+  font-size: 25px; 
+  font-family: Arial; 
+  font-weight: bold; 
+  white-space: nowrap; /* Prevent text wrapping to a new line */
+  text-decoration: underline  #0d355c;
+  align-self: center;
+  margin-bottom: 20px;
+  padding-top: 0%;
+}
+
+.infographic-container {
+  width: 100%;
+  height: 455px; 
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/10;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.infographic-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.infographic-slide img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/*style for next prev btn*/
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; 
+  padding: 0px;
+  cursor: pointer;
+  border: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev img, .next img {
+  width: 200px; 
+  height: 200px; 
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.text{
+  font-family: Arial;
+  text-decoration: underline 3px #0d355c;
+  padding: 40px;
+  font-weight: 50px;
+}
+
+/*content2*/
+.lilbox{
+  display: grid; /* Make the feature-box a flex container */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  flex-direction: column; /* align elementss  vertically */
+  justify-content: center; /* Align the elements horizontally */
+  align-items: center; /* Align the elements vertically at the top */
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 50px;
+  box-shadow: 0 0 40px 2px rgba(37, 73, 214, 0.18) ;
+  max-width: 1000px; /* change width of the box */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  height: 430px;
+}
+
+.lilbox h2{
+  font-family: cursive;
+  align-self: baseline;
+  margin-top: 0;
+}
+
+.col-sm-4{
+  padding-top: 10px;
+}
+
+.card-body {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.col-sm-4 .card-body .card{
+ width: 20px;
+ height: 20px;
+}
+
+.card-body ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.card-body li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  text-align: left;
+}
+
+/* Org Chart  */
+.feature-box {
+  position: relative;
+  max-width: 100%; /* Ensures it doesn't overflow */
+  overflow: hidden; /* Hides excess content */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Image in the feature box */
+.orgImg {
+  max-width: 100%; /* Keeps image responsive */
+  height: auto;    /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* Modal for Enlarged Image */
+.modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 1000; /* Keeps modal on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent overlay */
+  display: flex;
+  align-items: center; /* Centers image vertically */
+  justify-content: center; /* Centers image horizontally */
+  overflow: auto; /* Prevent clipping on small screens */
+}
+
+/* Enlarged Image */
+.modal img {
+  max-width: 90%;
+  max-height: 90%; /* Ensures the image fits within modal */
+  object-fit: contain; /* Prevents distortion */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px; /* Bigger and more visible */
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001; /* Ensures it stays above the image */
+}
+
+
+
+/*vmo css*/
+.about-item p, .about-item ul .about-item li {
+  text-align: justify;
+}
+
+.about-item li{
+  text-align: left;
+}
+
+/*contact css*/
+.map-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* space between the three columns */
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.col {
+  flex: 1; /* each column to take equal width */
+  padding: 45px;
+}
+
+.contact-info h3, .operating-hours h3{
+  font-size: 18px;
+}
+
+.contact-info, .operating-hours p {
+  text-align: left; /* Left align the text for contact info and operating hours */
+  padding-top: 10px;
+}
+
+.map {
+  text-align: right; /* Align the map iframe to the right */
+}
+
+.map iframe {
+  width: 400px;
+  height: 300px; /* Set a fixed height for the map iframe */
+  border: 0;
+}
+
+/*school table css*/
+.table .thead .tbody {
+  margin-top: 20px; 
+  width: 90%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*footer*/
+.footContainer{
+  max-width: 1170px;
+  margin: auto;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+ul{
+  list-style: none;
+}
+
+.footer{
+  background-color: #0d355c;
+  padding: 70px 0;
+}
+
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+  flex-grow: 1;
+  flex-basis: 25%;
+}
+
+.footer-col h4{
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: lightgray;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  padding-left: 0;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  padding-left: 0;
+}
+
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px; 
+}
+
+.footer-col .socMed a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(225, 225, 225, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .socMed a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  color: white;
+}
+
+.contact-item span {
+  color: #bbbbbb;
+}
+
+/* Media query for tablets and smaller devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Navbar styles */
+  .nav-item {
+    background-color: transparent; 
+    font-weight: 600;
+    margin-right: 10px;
+    font-family: Arial;
+    z-index: 10;
+
+  }
+
+  .navbar-brand img {
+    width: 120px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+
+  }
+
+  /* Container width adjustment */
+  .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+
+  /* Wrapper adjustments */
+  .wrapper {
+    max-width: 100%;
+    padding: 20px;
+    height: auto;
+    margin: 15px auto;
+  }
+
+  /* Feature box text */
+  .wrapper .feature-box h1 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  /* Infographic container */
+  .infographic-container {
+    height: auto;
+    max-height: 300px;
+  }
+
+  /* Navigation buttons */
+  .prev img, .next img {
+    display: none;
+  }
+  
+  .map-container .map{
+    width: fit-content ;
+  }
+
+  .lilbox .row {
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .lilbox .col-sm-4 {
+    width: 100%; /* Make each card full width */
+  }
+
+  /* Footer adjustments */
+  .footContainer{
+    height: fit-content;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  .footer .footContainer{
+    padding-left: 30px;
+  }
+}
+
+/* Media query for mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    height: fit-content;
+    padding: 10px 0;
+  }
+
+  .navbar-toggler {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar-brand img {
+    width: 100px; /*Reduce the size of logo for tablets*/
+    height: 90px;
+
+  }
+
+  /*Search form*/
+  .d-flex {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Feature box */
+  .feature-box h1 {
+    font-size: 18px;
+  }
+
+  /*Lilbox adjustments*/
+  .lilbox {
+    height: auto;
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  /* Card layouts */
+  .col-sm-4 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .card {
+    margin-bottom: 15px;
+  }
+
+  /* Map container */
+  .map-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .col {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* Footer */
+  .footContainer {
+    height: fit-content;
+  }
+
+  .footer-col {
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  .footer {
+    padding: 40px 0;
+  }
+}
+
+/* Media query for extra small devices (max-width: 576px) */
+@media (max-width: 576px) {
+  /* Container */
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Text adjustments */
+  h1, h2, h3 {
+    font-size: 90%;
+  }
+
+  /* Navigation */
+  .nav-item {
+    padding: 5px 0;
+  }
+
+  /* Buttons */
+  .prev, .next {
+    display: none; /* Hide navigation arrows on very small screens */
+  }
+
+  /* Footer */
+  .footer-col h4 {
+    font-size: 16px;
+  }
+
+  .footer-col ul li a {
+    font-size: 14px;
+  }
+
+  .socMed a {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+  }
+}
